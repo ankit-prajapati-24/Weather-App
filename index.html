@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <div class="wrappar">
+        <div class="container mx-auto p-5">
+            <h1 class="font-bold text-2xl  ">
+                Weather App
+            </h1>
+    
+            <div class="tab_container">
+    
+                <p  class="tab" data-userWeather> Your Weather</p>
+                <p class="tab" data-SearchWeather> Search Weather</p>
+            </div>
+    
+            <div class="weather-container">
+                <!-- grant location container -->
+    
+                <div class="grant-location-container sub-container">
+                    <img src="https://webstockreview.net/images/clipart-map-location-sign.png" height="50" width="50" alt="">
+                    <p>Grant location Access</p>
+                    <p>Allow access to get weather Information</p>
+                    <button class="btn2" class=" p-3" data-grantAccess>Grant Access </button>
+                </div>
+    
+    
+                <!-- search form  -->
+    
+                <form class="form-container" data-searchForm>
+                    <input type="text" placeholder="Search for city..." data-searchInput>
+                    <button class="btn" type="submit">
+                     <img src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color/700/09_search-1024.png" alt="" width="40" height="40" class="" loading="lazy">
+                    </button> 
+                </form>
+    
+                <!-- loading screen container -->
+    
+                <div class="loading-container sub-container">
+                    <img src="Spinner-1s-200px (1).svg" alt="" width="150"  height="150">
+                    <p>loading</p>
+                </div>
+    
+    
+                <!-- show weather info  -->
+    
+                <div class="user-infor-container sub-container">
+                      
+                    <!-- city name and flag  -->
+                    <div class="name">
+                        <p data-cityname></p>
+                        <img data-countyIcon>
+                    </div>
+                        
+                    <!-- weather-discription  -->
+                    <p data-weatherDisc></p>
+                       
+                    <!-- weathericon  -->
+                    <img data-waathericon>
+                    
+                     <!-- temparutrre -->
+                    <p data-temp></p>
+    
+                    <div class="perameter-container">
+                        <!-- card1 -->
+                        <div class="perameter">
+                            <img src="wind-svgrepo-com.svg" alt="" height="50" width="50">
+                            <p> WindSpeed</p>
+                            <p data-windspeed></p>
+                        </div>
+    
+                         <!-- card2 -->
+                         <div class="perameter">
+                            <img src="heat-svgrepo-com.svg" alt="" height="50" width="50">
+                            <p> humidity</p>
+                            <p data-humidity></p>
+                        </div>
+    
+                         <!-- card3 -->
+                         <div class="perameter">
+                            <img src="cloud-sun-2-svgrepo-com.svg" alt="" height="50" width="50">
+                            <p> Clouds</p>
+                            <p data-cloudiness></p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
